@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .row::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        [class*="col-"] {
+            float: left;
+            padding: 15px;
+        }
+
+        html {
+            font-family: "Lucida Sans", sans-serif;
+        }
+
+        .header {
+            background-color: #9933cc;
+            color: #ffffff;
+            padding: 15px;
+        }
+
+        .menu ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .menu li {
+            padding: 8px;
+            margin-bottom: 7px;
+            background-color: #33b5e5;
+            color: #ffffff;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+        }
+
+        .menu li:hover {
+            background-color: #0099cc;
+        }
+
+        .footer {
+            background-color: #0099cc;
+            color: #ffffff;
+            text-align: center;
+            font-size: 12px;
+            padding: 15px;
+        }
+
+       .gallery img {
+    width: 100%; 
+    max-width: 400px; 
+    height: auto;
+    display: block; 
+    margin: 0 auto;
+    border: 5px solid #9933cc; 
+    border-radius: 8px;
+}
+
+.pagination a {
+    padding: 8px 16px;
+    margin: 0 0px;
+    background-color: #9933cc;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.pagination a:hover {
+    background-color: #771a99;
+}
+
+.pagination a.active {
+    background-color: #660066;
+    font-weight: bold;
+}
+
+        /* For mobile phones: */
+        [class*="col-"] {
+            width: 100%;
+        }
+
+        @media only screen and (min-width: 600px) {
+
+            /* For tablets: */
+            .col-s-1 {
+                width: 8.33%;
+            }
+
+            .col-s-2 {
+                width: 16.66%;
+            }
+
+            .col-s-3 {
+                width: 25%;
+            }
+
+            .col-s-4 {
+                width: 33.33%;
+            }
+
+            .col-s-5 {
+                width: 41.66%;
+            }
+
+            .col-s-6 {
+                width: 50%;
+            }
+
+            .col-s-7 {
+                width: 58.33%;
+            }
+
+            .col-s-8 {
+                width: 66.66%;
+            }
+
+            .col-s-9 {
+                width: 75%;
+            }
+
+            .col-s-10 {
+                width: 83.33%;
+            }
+
+            .col-s-11 {
+                width: 91.66%;
+            }
+
+            .col-s-12 {
+                width: 100%;
+            }
+        }
+
+        @media only screen and (min-width: 768px) {
+
+            /* For desktop: */
+            .col-1 {
+                width: 8.33%;
+            }
+
+            .col-2 {
+                width: 16.66%;
+            }
+
+            .col-3 {
+                width: 25%;
+            }
+
+            .col-4 {
+                width: 33.33%;
+            }
+
+            .col-5 {
+                width: 41.66%;
+            }
+
+            .col-6 {
+                width: 50%;
+            }
+
+            .col-7 {
+                width: 58.33%;
+            }
+
+            .col-8 {
+                width: 66.66%;
+            }
+
+            .col-9 {
+                width: 75%;
+            }
+
+            .col-10 {
+                width: 83.33%;
+            }
+
+            .col-11 {
+                width: 91.66%;
+            }
+
+            .col-12 {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <h1>Ma. Isabela Grace C. Codilla</h1>
+    </div>
+
+    <div class="row">
+        <div class="col-3 col-s-3 menu">
+            <ul>
+                <a href="index.html" style="text-decoration: none"><li>About Me</li></a>
+                <a href="SubjectTaken.html" style="text-decoration: none"><li>Subject Taken</li></a>
+                <a href="enrolled.html" style="text-decoration: none"><li>Enrolled</li></a>
+                <a href="contactme.html" style="text-decoration: none"><li>Contact Me</li></a>
+                <a href="myfavorites.html" style="text-decoration: none"><li>My Favorites</li></a>
+                <a href="gallery.html" style="text-decoration: none"><li>Gallery</li></a>
+            </ul>
+        </div>
+
+        <div class="col-6 col-s-9">
+            <h1>Gallery</h1>
+            <ul> 
+                <div class="row gallery" id="galleryPage1">
+                    <div class="col-4 col-s-4">
+                        <img src="C:\Users\arne\OneDrive\Dokumenter\BSIT2-2NDSEM\html\images\pic10.jpg" alt="Image 1">
+                    </div>
+                </div>
+
+                <div class="row gallery" id="galleryPage2" style="display: none;">
+                    <div class="col-4 col-s-4">
+                        <img src="C:\Users\arne\OneDrive\Dokumenter\BSIT2-2NDSEM\html\images\pic2.jpg" alt="Image 2">
+                    </div>
+                </div>
+
+                <div class="row gallery" id="galleryPage3" style="display: none;">
+                    <div class="col-4 col-s-4">
+                        <img src="C:\Users\arne\OneDrive\Dokumenter\BSIT2-2NDSEM\html\images\pic1.jpg" alt="Image 3">
+                    </div>
+                </div>
+		<div class="row gallery" id="galleryPage4" style="display: none;">
+                    <div class="col-4 col-s-4">
+                        <img src="C:\Users\arne\OneDrive\Dokumenter\BSIT2-2NDSEM\html\images\pic3.jpg" alt="Image 4">
+                    </div>
+                </div>
+		<div class="row gallery" id="galleryPage5" style="display: none;">
+                    <div class="col-4 col-s-4">
+                        <img src="C:\Users\arne\OneDrive\Dokumenter\BSIT2-2NDSEM\html\images\pic4.jpg" alt="Image 5">
+                    </div>
+                </div>
+
+		<div class="row gallery" id="galleryPage6" style="display: none;">
+                    <div class="col-4 col-s-4">
+                        <img src="C:\Users\arne\OneDrive\Dokumenter\BSIT2-2NDSEM\html\images\pic5.jpg" alt="Image 6">
+                    </div>
+                </div>
+		<div class="row gallery" id="galleryPage7" style="display: none;">
+                    <div class="col-4 col-s-4">
+                        <img src="C:\Users\arne\OneDrive\Dokumenter\BSIT2-2NDSEM\html\images\pic6.jpg" alt="Image 7">
+                    </div>
+                </div>
+		<div class="row gallery" id="galleryPage8" style="display: none;">
+                    <div class="col-4 col-s-4">
+                        <img src="C:\Users\arne\OneDrive\Dokumenter\BSIT2-2NDSEM\html\images\pic7.jpg" alt="Image 8">
+                    </div>
+                </div>
+		<div class="row gallery" id="galleryPage9" style="display: none;">
+                    <div class="col-4 col-s-4">
+                        <img src="C:\Users\arne\OneDrive\Dokumenter\BSIT2-2NDSEM\html\images\pic8.jpg" alt="Image 9">
+                    </div>
+                </div>
+		<div class="row gallery" id="galleryPage10" style="display: none;">
+                    <div class="col-4 col-s-4">
+                        <img src="C:\Users\arne\OneDrive\Dokumenter\BSIT2-2NDSEM\html\images\pic9.jpg" alt="Image 10">
+                    </div>
+                </div>
+
+
+                <div class="pagination">
+                    <a href="#" onclick="previousPage()">Previous</a>
+                    <a href="#" onclick="showPage(1)">1</a>
+                    <a href="#" onclick="showPage(2)">2</a>
+                    <a href="#" onclick="showPage(3)">3</a>
+		 <a href="#" onclick="showPage(4)">4</a>
+		 <a href="#" onclick="showPage(5)">5</a>
+		 <a href="#" onclick="showPage(6)">6</a>
+		 <a href="#" onclick="showPage(7)">7</a>
+		 <a href="#" onclick="showPage(8)">8</a>
+		 <a href="#" onclick="showPage(9)">9</a>
+		 <a href="#" onclick="showPage(10)">10</a>
+                 <a href="#" onclick="nextPage()">Next</a>
+                </div>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>© 2023 - 2024 ITP4 | All Right Reserved</p>
+    </div>
+
+    <script>
+        let currentPage = 1; // Track the current page
+
+        function showPage(pageNumber) {
+            const pages = document.querySelectorAll('.gallery');
+            pages.forEach(page => page.style.display = 'none');
+            document.getElementById('galleryPage' + pageNumber).style.display = 'block';
+            currentPage = pageNumber;
+        }
+
+        function nextPage() {
+            const nextPageNumber = currentPage + 1 > 10 ? 1 : currentPage + 1;
+            showPage(nextPageNumber);
+        }
+
+        function previousPage() {
+            const previousPageNumber = currentPage - 1 < 1 ? 10 : currentPage - 1;
+            showPage(previousPageNumber);
+        }
+
+        showPage(1);
+    </script>
+
+</body>
+
+</html>
